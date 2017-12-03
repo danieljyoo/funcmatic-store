@@ -2,6 +2,14 @@ const uuidV4= require('uuid')
 var sync = require('synchronize')
 
 const store = require('../lib/store')
+// RESTHeart Demo Playground
+store.setConnectionConfig({
+  protocol:"http",
+  host: "dbapi.io",
+  db: "db",
+  collection: "coll"
+})
+store.initConnection()
 
 describe('RESTHeart Operations Test', () => {
   it ('should insert a single document', done => {
