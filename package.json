@@ -13,7 +13,8 @@
     "url": "https://github.com/danieljyoo/funcmatic-store.git"
   },
   "dependencies": {
-    "funcmatic-request": "^1.1.0-alpha"
+    "funcmatic-request": "^1.1.0-alpha",
+    "uuid": "^3.1.0"
   },
   "devDependencies": {
     "jest": "^21.2.1"
