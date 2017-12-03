@@ -50,7 +50,7 @@ describe('RESTHeart Operations Test', () => {
       done()
     })
   })
-  it ('should insert and update a document', done => {
+  it ('should update a document via PATCH', done => {
     sync.fiber(() => {
       var doc = {
         "hello": "world",
@@ -107,6 +107,25 @@ describe('RESTHeart Operations Test', () => {
         }
       })
       
+      done()
+    })
+  })
+  it ('should find one document using a query', done => {
+    sync.fiber(() => {
+      var doc = {
+        "hello": "world",
+        "foo": "bar"
+      }
+      var result = store.insert(doc)
+      var docid = result.data.insertedIds[0]
+      var query = {
+        "_id": docid
+      }
+      var result = store.findOne(query)
+      expect(result).toMatchObject({
+        status: 200,
+        data: doc
+      })
       done()
     })
   })
