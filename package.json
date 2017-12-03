@@ -1,0 +1,24 @@
+{
+  "name": "funcmatic-store",
+  "version": "1.0.0-alpha",
+  "description": "A simple synchronous JSON datastore API intended to be used in a Lambda Node environment. Essentially a very simple API client for RESTHeart (MongoDB HTTP Server).",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Daniel Jhin Yoo <danieljyoo@gmail.com> (https://github.com/danieljyoo)",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/danieljyoo/funcmatic-store.git"
+  },
+  "dependencies": {
+    "funcmatic-request": "^1.1.0-alpha"
+  },
+  "devDependencies": {
+    "jest": "^21.2.1"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  }
+}
